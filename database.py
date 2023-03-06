@@ -21,10 +21,10 @@ def database_connect():
     connection = None
     try:
         '''
-        connect(database='y12i2120_unikey',
-            host='soit-db-pro-2.ucc.usyd.edu.au,
+        connect(database='',
+            host=',
             password='password_from_config',
-            user='y19i2120_unikey')
+            user='')
         '''
         connection = pg8000.connect(
             database=config['DATABASE']['database'],
