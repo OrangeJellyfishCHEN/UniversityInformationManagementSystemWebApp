@@ -1,0 +1,25 @@
+{% include 'top.html' %}
+<div id="content">
+    <div id="container">
+        <h1 class="page-title">Search for units which have a class at a particular time</h1>
+        <table class="pure-table">
+            <thead>
+            <tr><th>UOS Code</th><th>UOS Name</th></tr>
+            </thead>
+            <tbody>
+            <form action="{{ url_for("search_lecture")}}" method="post">
+            <label for="firstname">Exact Date(e.g. Mon12):</label>
+            <input type="text" id="time" name="time" placeholder="time">
+            <button type="submit">Search</button>
+            {% for search in searchs %}
+            <tr>
+                <td> {{search[0]}}</td>
+                <td> {{search[1]}} </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

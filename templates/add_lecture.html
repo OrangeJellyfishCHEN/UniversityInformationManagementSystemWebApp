@@ -1,0 +1,26 @@
+{% include 'top.html' %}
+<div id="content">
+    <div id="container">
+        <h1 class="page-title">Add new lecture into the table</h1>
+        <table class="pure-table">
+            <thead>
+            </thead>
+            <tbody>
+            <form action="{{ url_for("add_lecture")}}" method="post">
+            <label for="uoSCode">uoSCode (must be 8 characters, e.g. ISYS2120):</label>
+            <input type="text" id="uoSCode" name="uoSCode" placeholder="uoSCode"><br><br>
+            <label for="semester">semester(must be 2 characters, e.g. S1):</label>
+            <input type="text" id="semester" name="semester" placeholder="semester"><br><br>
+            <label for="year">year(must be a valid year, e.g. 2001):</label>
+            <input type="text" id="year" name="year" placeholder="year"><br><br>
+            <label for="classTime">classTime(must be a valid time in 5 characters, e.g. Mon12):</label>
+            <input type="text" id="classTime" name="classTime" placeholder="classTime"><br><br>
+            <label for="classroomId">classroomId(must be a valid classroomId which is no more than 8 characters):</label>
+            <input type="text" id="classroomId" name="classroomId" placeholder="classroomId"><br><br>
+            <button type="submit">Add</button>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
